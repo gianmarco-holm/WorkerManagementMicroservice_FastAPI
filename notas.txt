@@ -1,0 +1,42 @@
+1.- # Preparar el entorno virtual para WSL
+    sudo apt install python3-venv // instalar si no lo tienes 
+    python3 -m venv entorno // Crea el entorno
+    source entorno/bin/activate // Activar el entorno
+    deactivate // Para desactivar
+
+2.- # Descarga e instalación de modulos de python
+    pip install fastapi // Instalamos el marco web
+    pip install uvicorn // Instalamos el servidor que permite ejecutar las apps creadas
+
+3.- # Creamos el archivo main.py y para poder ejecutarla se usa lo siguiente
+    uvicorn main:app // se usa nombreArchivo:nombreAplicativo
+    uvicorn main:app --reload // --reload para que se recargue cuando detecta cambios
+    uvicorn main:app --reload --port 5000 // Para cambiar de puerto
+    uvicorn main:app --reload --port 5000 --host 0.0.0.0 // Para acceder en toda la red
+
+4.- # Para acceder a la documentación que nos da FastAPI con Swagger solo se coloca /docs
+
+5.- # Despues de crear todo el routing se crea los esquemas de validación con Pydantic
+
+6.- # Validación de esquema con Field, validación de parametro de url con Path, validación
+     de parametro de consulta o query con query
+
+7.- # Se coloca el tipo de respuesta que va a tener el endpoint
+
+8.- # Se coloca el status_code
+
+9.- # Se realiza la funcion para codificar y decodificar el token y ademas de crear 
+    la funcion que solicita al usuario el token generado
+
+10.- # En este caso se utilizara SQLite porque es una app pequeña y se instala la extension y la libreria
+    pip install sqlalchemy
+
+11.- # Se crea la carpeta config para la conexión a la base de datos
+
+12.- # Se crea los modelos
+
+13.- # Se crea los middlewares -> routers -> servicios -> schemas -> utils
+
+14.- # Se crea el .gitignore
+
+15.- # pip freeze > requirements.txt
