@@ -50,7 +50,7 @@ def get_marcaciones_por_empleado(idEmpleado: int) -> dict:
 def create_empleado(empleado: EmpleadoSchema) -> dict:
     db = Session()
     EmpleadoService(db).crear_empleado(empleado)
-    return JSONResponse(status_code=201, content={"message": "Se ha registrado el empleado"})
+    return JSONResponse(status_code=201, content={"message": "Se registro el empleado con exito"})
 
 
 @empleado_router.put('/empleados/{idEmpleado}', tags=['Empleados'], response_model=dict, status_code=200)
