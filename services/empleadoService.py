@@ -33,7 +33,6 @@ class EmpleadoService():
                 "empleado": empleado,
                 "marcaciones": marcaciones
             }
-
             return empleado_con_marcaciones
         else:
             return None
